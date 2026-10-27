@@ -64,6 +64,7 @@ body.jake #savepill{display:none}
 .strip .pol:nth-child(3){transform:rotate(-2deg)}
 .strip .pol:nth-child(4){transform:rotate(3deg)}
 .strip.two .pol{width:44%;max-width:170px}
+.ps{text-align:center;color:#C4556B;font-family:Georgia,serif;font-style:italic;font-size:12.5px;margin:10px 0 2px}
 .payer{display:inline-flex;gap:4px;margin-left:8px;vertical-align:middle}
 .pbtn{border:1px solid #C4556B;background:#fff;color:#C4556B;border-radius:999px;font-size:10px;padding:2px 8px;cursor:pointer;font-family:Verdana,sans-serif}
 .pbtn.on{background:#C4556B;color:#fff;font-weight:bold}
@@ -86,6 +87,7 @@ body.jake .payer{pointer-events:none;opacity:.55}
     <figure class="pol"><img src="img/p-tongue.jpg" alt="Goofy selfie"><figcaption>always goofy</figcaption></figure>
   </div>
 
+  <p class="ps">ps — i love you ♥</p>
   <div class="day">📖 THE INFO · READ ME FIRST ♥</div>
 
   <div class="card">
@@ -95,6 +97,7 @@ body.jake .payer{pointer-events:none;opacity:.55}
     <div class="set">📵 <b>Heads up:</b> there's <b>no cell service</b> up there — turn on Wi-Fi calling before we go · dome Wi-Fi password: <b>NRPwifi23!</b></div>
     <div class="set">💰 <b>Prices:</b> every number on this page is the <b>total for the two of us, tax already in</b> — if a note says "each", that's per person before tax, and the big price beside it is still the for-two total with tax. The bar at the bottom splits it 50/50 \u2014 and in our plan (bottom button) you can tap J or V on any line if one of us is covering that one; it rebalances itself.</div>
     <div class="set">🎒 <b>Pack:</b> a swimsuit for the sauna, warm layers for the fire pit, comfy shoes — everything else is handled ♥</div>
+    <div class="set" style="text-align:center;color:#C4556B;font-style:italic;">ps — i love you, by the way</div>
   </div>
 
   <div class="card">
@@ -104,6 +107,7 @@ body.jake .payer{pointer-events:none;opacity:.55}
     <div class="set">💌 <b>Your only job:</b> answer the questionnaire below — every tap saves itself and lands on Jake's phone. The little surprises along the way are his department ♥</div>
   </div>
 
+  <p class="ps">ps — i love you. answer honestly, there are no wrong picks ♥</p>
   <div class="day">📝 THE QUESTIONNAIRE · YOUR PICKS ♥</div>
 
   <div class="day">SUNDAY · NOV 1</div>
@@ -207,6 +211,7 @@ body.jake .payer{pointer-events:none;opacity:.55}
     <label class="opt"><input type="checkbox" data-extra="renaissance"><span><b>Renaissance Variety</b> — retro games + books on Main St, Shawville · 30-min browse</span><span class="price">free</span></label>
   </div>
 
+  <p class="ps">ps — i love you (yes, mid-list. no reason.)</p>
   <div class="day">AROUND THERE · EVEN MORE TO EXPLORE ♥</div>
 
   <div class="card">
@@ -227,6 +232,7 @@ body.jake .payer{pointer-events:none;opacity:.55}
     <label class="opt"><input type="checkbox" data-extra="pinklake"><span><b>Pink Lake lookout, Gatineau Park</b> — the turquoise lake lookout<span class="note">only on the A5 route home (+~20 min)</span></span><span class="price">free</span></label>
   </div>
 
+  <p class="ps">ps — i love you. almost done, promise</p>
   <div class="day">FUN ON THE WAY HOME ♥</div>
 
   <div class="card">
@@ -459,7 +465,7 @@ function render(){
        (t.tbd ? "<br>Plus " + t.tbd + " item(s) priced when booked" : "") +
        "<br>GRAND TOTAL (for two, tax in): " + fmt(t.total) + "</div>";
   h += "<p class='where' style='margin-top:10px;'>All saved automatically as you tap \u2665 Jake sees your picks live \u2014 nothing to send, save, or export.</p>";
-  h += "<p class='where' style='margin-top:10px;'>One year of us ♥ — Jake & Van · Nov 1–2, 2026</p>";
+  h += "<p class='where' style='margin-top:10px;'>One year of us ♥ — Jake & Van · Nov 1–2, 2026</p><p class='ps'>ps — i love you ♥</p>";
   document.getElementById('summary').innerHTML = h;
 }
 function summaryText(){
