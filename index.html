@@ -73,7 +73,7 @@ body.jake #savepill{display:none}
 <div class="wrap">
   <h1>Our Anniversary Weekend ♥</h1>
   <div class="sub">for Van · Sunday Nov 1 → Monday Nov 2, 2026 · Vinyl Dome, Pontiac</div>
-  <p class="intro">Tick what we want to do — everything you pick lands in the cart at the bottom with the price <b>tax already in</b>.<br>
+  <p class="intro">Two parts, baby: <b>📖 the info</b> (everything to read first) and <b>📝 the questionnaire</b> (your picks). The second you tap a pick it <b>saves itself</b> — Jake sees your answers live on his phone. Nothing to send, save, or export.<br>
   At the end it builds our plan + the shopping list: what to buy, where, and what it costs.</p>
 
   <div class="strip">
@@ -82,7 +82,7 @@ body.jake #savepill{display:none}
     <figure class="pol"><img src="img/p-tongue.jpg" alt="Goofy selfie"><figcaption>always goofy</figcaption></figure>
   </div>
 
-  <div class="day">THE BASICS ♥</div>
+  <div class="day">📖 THE INFO · READ ME FIRST ♥</div>
 
   <div class="card">
     <div class="set">📍 <b>Where:</b> the Vinyl Dome — a glass dome in the woods at <b>299 Chem. du Lac de la Truite, Pontiac, QC</b> (near Fort-Coulonge) · ~1 hr 50 drive from Ottawa</div>
@@ -92,6 +92,15 @@ body.jake #savepill{display:none}
     <div class="set">💰 <b>Prices:</b> every number on this page is the <b>total for the two of us, tax already in</b> — if a note says "each", that's per person before tax, and the big price beside it is still the for-two total with tax.</div>
     <div class="set">🎒 <b>Pack:</b> a swimsuit for the sauna, warm layers for the fire pit, comfy shoes — everything else is handled ♥</div>
   </div>
+
+  <div class="card">
+    <h3>The shape of our weekend <span class="when">· just so you can picture it</span></h3>
+    <div class="set">🚗 <b>Sunday:</b> we leave Ottawa ~1:30 PM, roll up to the dome ~3:20, and settle in — first record on, sauna, then the fire pit at golden hour (sunset ~4:50) with s'mores + photos. Charcuterie and a cozy no-clock night after that.</div>
+    <div class="set">🌙 <b>Monday:</b> slow morning, breakfast we bring with us, sauna #2 if we feel like it, checkout by 11:00 — then whatever you pick in the questionnaire (waterfall? lunch?) and a lazy drive home.</div>
+    <div class="set">💌 <b>Your only job:</b> answer the questionnaire below — every tap saves itself and lands on Jake's phone. The little surprises along the way are his department ♥</div>
+  </div>
+
+  <div class="day">📝 THE QUESTIONNAIRE · YOUR PICKS ♥</div>
 
   <div class="day">SUNDAY · NOV 1</div>
 
@@ -417,9 +426,7 @@ function render(){
   h += "<div class='tot'>Buy before / at stops: " + fmt(t.shop) + "<br>Pay on the trip: " + fmt(t.trip) +
        (t.tbd ? "<br>Plus " + t.tbd + " item(s) priced when booked" : "") +
        "<br>GRAND TOTAL (for two, tax in): " + fmt(t.total) + "</div>";
-  h += "<div class='btns no-print'><button onclick='window.print()'>Print / save as PDF</button>" +
-       "<button onclick='copyPlan()'>Copy the list</button>" +
-       "<button onclick='downloadPlan()'>Download .txt</button></div>";
+  h += "<p class='where' style='margin-top:10px;'>All saved automatically as you tap \u2665 Jake sees your picks live \u2014 nothing to send, save, or export.</p>";
   h += "<p class='where' style='margin-top:10px;'>One year of us ♥ — Jake & Van · Nov 1–2, 2026</p>";
   document.getElementById('summary').innerHTML = h;
 }
