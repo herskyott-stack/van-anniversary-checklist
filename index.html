@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Anniversary Weekend — Checklist ♥ Jake & Van · Nov 1–2, 2026</title>
+<style>
+  :root{--plum:#59303E;--rose:#C4556B;--rose-soft:#F9E3E0;--blush:#FDF1EF;--gold:#C9973F;--ink:#40333A;--soft:#97828A;--cream:#FFFDF9;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:Georgia,'Times New Roman',serif;background:var(--blush);color:var(--ink);padding:18px 14px 130px;}
+  .wrap{max-width:640px;margin:0 auto;}
+  h1{font-size:27px;color:var(--plum);text-align:center;line-height:1.2;}
+  .sub{text-align:center;color:var(--rose);font-family:Verdana,sans-serif;font-size:12.5px;margin:6px 0 4px;}
+  .intro{text-align:center;color:var(--soft);font-family:Verdana,sans-serif;font-size:12.5px;line-height:1.55;margin-bottom:16px;}
+  .day{background:var(--rose);color:#fff;font-family:Verdana,sans-serif;font-weight:bold;font-size:12px;letter-spacing:.06em;padding:6px 12px;border-radius:6px;margin:18px 0 8px;}
+  .card{background:var(--cream);border:1px solid var(--rose-soft);border-radius:12px;padding:12px 14px;margin-bottom:10px;}
+  .card h3{font-size:16.5px;color:var(--plum);margin-bottom:8px;}
+  .card h3 .when{color:var(--rose);font-size:12.5px;font-family:Verdana,sans-serif;font-weight:normal;}
+  label.opt{display:flex;gap:9px;align-items:flex-start;padding:7px 9px;border-radius:9px;cursor:pointer;font-family:Verdana,sans-serif;font-size:13.5px;line-height:1.45;}
+  label.opt:hover{background:#fdf3f1;}
+  label.opt input{margin-top:2px;accent-color:var(--rose);width:17px;height:17px;flex:none;}
+  label.opt .price{margin-left:auto;color:var(--rose);font-weight:bold;white-space:nowrap;padding-left:8px;}
+  label.opt .note{display:block;color:var(--soft);font-size:11.5px;}
+  .set{font-family:Verdana,sans-serif;font-size:13.5px;color:var(--soft);padding:2px 9px 4px;}
+  /* cart bar */
+  #cartbar{position:fixed;left:0;right:0;bottom:0;background:var(--plum);color:#FFE3E0;padding:10px 14px;box-shadow:0 -3px 14px rgba(0,0,0,.25);z-index:50;}
+  #cartbar .inner{max-width:640px;margin:0 auto;display:flex;align-items:center;gap:12px;font-family:Verdana,sans-serif;}
+  #cartTotal{font-size:21px;font-weight:bold;color:#fff;}
+  #cartMeta{font-size:11.5px;line-height:1.4;flex:1;}
+  #cartbar button{background:var(--rose);color:#fff;border:none;border-radius:8px;padding:9px 13px;font-size:13px;cursor:pointer;font-family:Verdana,sans-serif;}
+  #cartbar button.ghost{background:transparent;border:1px solid #c99; }
+  /* summary */
+  #summary{display:none;background:var(--cream);border:1.5px solid var(--gold);border-radius:12px;padding:16px;margin-top:20px;font-family:Verdana,sans-serif;}
+  #summary.open{display:block;}
+  #summary h2{font-family:Georgia,serif;color:var(--plum);font-size:20px;margin-bottom:8px;}
+  #summary h4{color:var(--rose);font-size:13px;margin:14px 0 5px;text-transform:uppercase;letter-spacing:.05em;}
+  #summary li{font-size:13.5px;line-height:1.55;margin-left:18px;}
+  #summary .tot{font-size:16px;font-weight:bold;color:var(--plum);margin-top:12px;line-height:1.6;}
+  #summary .where{color:var(--soft);font-size:12px;}
+  #summary .rowline{display:flex;justify-content:space-between;font-size:13.5px;line-height:1.55;}
+  .btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;}
+  .btns button{background:var(--plum);color:#fff;border:none;border-radius:8px;padding:10px 14px;font-size:13px;cursor:pointer;font-family:Verdana,sans-serif;}
+  .fineprint{color:var(--soft);font-family:Verdana,sans-serif;font-size:11px;text-align:center;line-height:1.6;margin-top:14px;}
+  @media print{
+    #cartbar,.no-print{display:none!important;}
+    body{padding:10px;background:#fff;}
+    #summary{display:block!important;border:none;}
+    .card{break-inside:avoid;}
+  }
+
+#savepill{position:fixed;top:10px;right:10px;z-index:60;background:#59303E;color:#fff;font-size:12px;padding:7px 12px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.25);opacity:.92}
+#jakebar{display:none;background:#59303E;color:#fff;text-align:center;padding:10px 12px;font-size:14px;border-radius:12px;margin:0 0 12px}
+body.jake #jakebar{display:block}
+body.jake #savepill{display:none}
+</style>
+</head>
+<body>
+<div id="jakebar">♥ You're seeing <b>Van's picks — live</b> · <span id="jaketime">waiting for her first save…</span></div>
+<div id="savepill">Your picks save automatically ♥</div>
+<div class="wrap">
+  <h1>Our Anniversary Weekend ♥</h1>
+  <div class="sub">for Van · Sunday Nov 1 → Monday Nov 2, 2026 · Vinyl Dome, Pontiac</div>
+  <p class="intro">Tick what we want to do — everything you pick lands in the cart at the bottom with the price <b>tax already in</b>.<br>
+  At the end it builds our plan + the shopping list: what to buy, where, and what it costs.</p>
+
+  <div class="day">SUNDAY · NOV 1</div>
+
+  <div class="card" data-group="start">
+    <h3>The drive out <span class="when">· pick one</span></h3>
+    <label class="opt"><input type="radio" name="start" value="adventure"><span><b>A · Adventure first</b> — leave 11:30 · cider tasting + winery, right on our route · dome ~3:20<span class="note">Coronation Hall cider tasting + the winery bottle</span></span><span class="price">$40.25</span></label>
+    <label class="opt"><input type="radio" name="start" value="straight" checked><span><b>B · Straight to the dome</b> — leave 1:30 · ~1h50 drive, zero detour · dome ~3:20</span><span class="price">$0</span></label>
+  </div>
+
+  <div class="card"><div class="set">🚗 <b>Arrive ~3:20 — the Vinyl Dome</b> · settle in, vinyl on, snacks out, then the <b>sauna</b> before sunset. <i>(set — no choice, no cost)</i></div></div>
+
+  <div class="card" data-group="drinks">
+    <h3>Golden-hour drinks · ~4:50 <span class="when">· pick our pour</span></h3>
+    <label class="opt"><input type="radio" name="drinks" value="toast" checked><span><b>A · Wine toast on the deck</b> — open the bottle as the sun goes down<span class="note">needs a bottle — the cart adds one automatically (winery or SAQ)</span></span><span class="price">bottle</span></label>
+    <label class="opt"><input type="radio" name="drinks" value="mulled"><span><b>B · Mulled wine by the fire</b> — warm spiced wine we make on the dome stove (~20 min)</span><span class="price">+$8.05</span></label>
+  </div>
+
+  <div class="card" data-group="firepit">
+    <h3>The fire pit <span class="when">· pick the vibe</span></h3>
+    <label class="opt"><input type="radio" name="firepit" value="classic"><span><b>A · Classic + cozy</b> — s'mores, blankets, stargazing</span><span class="price">$13.80</span></label>
+    <label class="opt"><input type="radio" name="firepit" value="silly"><span><b>B · Cute + silly</b> — silly Halloween hats + props, Polaroid photos by the fire</span><span class="price">$31.20</span></label>
+    <label class="opt"><input type="radio" name="firepit" value="both" checked><span><b>♥ · Both</b> — obviously</span><span class="price">$45.00</span></label>
+  </div>
+
+  <div class="card" data-group="dinner">
+    <h3>Dinner at the dome <span class="when">· pick one</span></h3>
+    <label class="opt"><input type="radio" name="dinner" value="cook"><span><b>A · Cook together</b> — dome kitchen + BBQ, ~45 min, us as chefs</span><span class="price">~$45.00</span></label>
+    <label class="opt"><input type="radio" name="dinner" value="charcuterie" checked><span><b>B · Charcuterie night</b> — big snack board, no cooking, all cozy</span><span class="price">$34.49</span></label>
+  </div>
+
+  <div class="card" data-group="after">
+    <h3>After dinner <span class="when">· pick one</span></h3>
+    <label class="opt"><input type="radio" name="after" value="games" checked><span><b>A · Games night</b> — card games + the candy tournament, all evening</span><span class="price">$17.24</span></label>
+    <label class="opt"><input type="radio" name="after" value="movie"><span><b>B · Movie night</b> — blanket fort + wine + one favourite, downloaded before we leave</span><span class="price">$0</span></label>
+  </div>
+
+  <div class="card"><div class="set">🌙 <b>Sleep in the dome</b> · no alarms, no signal, just quiet. <i>(set)</i></div></div>
+
+  <div class="day">MONDAY · NOV 2</div>
+
+  <div class="card" data-group="morning">
+    <h3>Slow morning <span class="when">· pick one</span></h3>
+    <label class="opt"><input type="radio" name="morning" value="sleep"><span><b>A · Sleep in</b> — right up to the 11:00 checkout, zero alarm energy</span><span class="price">$0</span></label>
+    <label class="opt"><input type="radio" name="morning" value="slow" checked><span><b>B · Slow + sweet</b> — wake ~9 · sauna #2, long breakfast, letters for next year</span><span class="price">$0</span></label>
+  </div>
+
+  <div class="card" data-group="falls">
+    <h3>Checkout 11:00 — then the waterfall? <span class="when">· pick one</span></h3>
+    <label class="opt"><input type="radio" name="falls" value="yes"><span><b>A · Chutes Coulonge</b> — 48-m falls, only 15 min from the dome · 1½–2 hrs there</span><span class="price">$27.60</span></label>
+    <label class="opt"><input type="radio" name="falls" value="skip" checked><span><b>B · Skip it</b> — straight to lunch, keep the day slow</span><span class="price">$0</span></label>
+  </div>
+
+  <div class="card" data-group="lunch">
+    <h3>Lunch in Shawville <span class="when">· ~50 min drive, on the way home · pick one</span></h3>
+    <label class="opt"><input type="radio" name="lunch" value="cafe" checked><span><b>A · Café 349</b> — cute art café, paninis + cheesecake</span><span class="price">~$39.09</span></label>
+    <label class="opt"><input type="radio" name="lunch" value="hursty"><span><b>B · Hursty's</b> — big diner lunch, omelettes + home fries</span><span class="price">~$40.24</span></label>
+  </div>
+
+  <div class="card" data-group="home">
+    <h3>The drive home <span class="when">· pick one</span></h3>
+    <label class="opt"><input type="radio" name="home" value="slow" checked><span><b>A · Slow + stops</b> — Luskville Falls hike right on Hwy 148 · home ~4:30–5:00</span><span class="price">$0</span></label>
+    <label class="opt"><input type="radio" name="home" value="straight"><span><b>B · Straight home</b> — cozy drive, our playlist · home ~2:00</span><span class="price">$0</span></label>
+  </div>
+
+  <div class="day">EXTRAS · TICK ANY ♥</div>
+
+  <div class="card">
+    <h3>At the dome — cute + chill</h3>
+    <label class="opt"><input type="checkbox" data-extra="namebottle"><span><b>Name the bottle</b> — name our bottle after our song, label it in marker · 10 min</span><span class="price">free</span></label>
+    <label class="opt"><input type="checkbox" data-extra="blind"><span><b>Blind wine tasting</b> — labels covered, guess + rate, loser pours · 30 min<span class="note">needs a second bottle</span></span><span class="price">$28.75</span></label>
+    <label class="opt"><input type="checkbox" data-extra="capsule"><span><b>Bottle time capsule</b> — tiny notes taped to bottle #2, opened on anniversary #2 · 15 min</span><span class="price">bottle #2</span></label>
+    <label class="opt"><input type="checkbox" data-extra="fondue"><span><b>Chocolate fondue night</b> — strawberries + cake + a glass each · 45 min</span><span class="price">~$20.69</span></label>
+    <label class="opt"><input type="checkbox" data-extra="paint"><span><b>Paint night</b> — our wine glasses or two mini canvases, souvenirs forever · 45 min</span><span class="price">~$17.00</span></label>
+    <label class="opt"><input type="checkbox" data-extra="waiter"><span><b>Waiter night</b> — Jake serves a mini wine flight, full fancy-waiter voice · 30 min</span><span class="price">free</span></label>
+    <label class="opt"><input type="checkbox" data-extra="toasts"><span><b>Toasts for Year 2</b> — each writes a tiny toast, read at sunset · 15 min</span><span class="price">free</span></label>
+    <label class="opt"><input type="checkbox" data-extra="dance"><span><b>Starlit slow dance</b> — one song on the deck, wine in hand · 10 min</span><span class="price">free</span></label>
+    <label class="opt"><input type="checkbox" data-extra="scavenger"><span><b>Polaroid scavenger hunt</b> — 6-photo challenge, silliest wins · 30–45 min<span class="note">shares the film with the fire-pit Polaroids — counted once</span></span><span class="price">film</span></label>
+    <label class="opt"><input type="checkbox" data-extra="stargaze"><span><b>Stargazing + hot chocolate bar</b> — blankets on the deck once dark (~6 PM) · 45 min</span><span class="price">$11.50</span></label>
+    <label class="opt"><input type="checkbox" data-extra="truths"><span><b>Two truths + a lie</b> — fire-pit edition, no phones · 20 min</span><span class="price">free</span></label>
+    <label class="opt"><input type="checkbox" data-extra="bucket"><span><b>Year-2 bucket list jar</b> — 12 ideas, one for every month coming · 20 min</span><span class="price">$3.45</span></label>
+    <label class="opt"><input type="checkbox" data-extra="massage"><span><b>Massage swap</b> — 20 minutes each · 40 min</span><span class="price">free</span></label>
+    <label class="opt"><input type="checkbox" data-extra="fullboard"><span><b>Upgrade: the FULL charcuterie board</b> — the big version for dome night<span class="note">adds the upgrade on top of charcuterie night</span></span><span class="price">+$40.24</span></label>
+  </div>
+
+  <div class="card">
+    <h3>Around there — little splurges + free stops</h3>
+    <label class="opt"><input type="checkbox" data-extra="flowers"><span><b>Flowers waiting at the dome</b> — a bouquet there when we walk in Sunday<span class="note">order ahead from a florist</span></span><span class="price">~$34.49</span></label>
+    <label class="opt"><input type="checkbox" data-extra="ciderhome"><span><b>Cider bottle to take home</b> — from Coronation Hall, for a future date night<span class="note">only works if we do the cider stop (Adventure start)</span></span><span class="price">~$17.25</span></label>
+    <label class="opt"><input type="checkbox" data-extra="alpaca"><span><b>Alpaca farm visit</b> — Willow Lane, Bristol · 1-hr guided tour, pairs with the cider stop<span class="note">by reservation — price when we book, not in the total yet</span></span><span class="price">TBD</span></label>
+    <label class="opt"><input type="checkbox" data-extra="night2"><span><b>Stay a SECOND night in the dome</b> — Mon → Tue, checkout moves to Tue 11 AM</span><span class="price">~$261.80</span></label>
+    <label class="opt"><input type="checkbox" data-extra="marchand"><span><b>Marchand Bridge</b> — 12 min from the dome · 15-min photo stop · Quebec's longest covered bridge</span><span class="price">free</span></label>
+    <label class="opt"><input type="checkbox" data-extra="norway"><span><b>Norway Bay waterfront</b> — 10 min from the cider mill · 30–45 min stroll</span><span class="price">free</span></label>
+    <label class="opt"><input type="checkbox" data-extra="milldam"><span><b>Mill Dam Park + Shawville Main St</b> — where lunch is · 45-min stroll</span><span class="price">free</span></label>
+    <label class="opt"><input type="checkbox" data-extra="ppj"><span><b>Cycloparc PPJ rail trail</b> — trailheads by the dome + in Shawville · easy 30–60 min walk</span><span class="price">free</span></label>
+    <label class="opt"><input type="checkbox" data-extra="renaissance"><span><b>Renaissance Variety</b> — retro games + books on Main St, Shawville · 30-min browse</span><span class="price">free</span></label>
+  </div>
+
+  <div class="day">AROUND THERE · EVEN MORE TO EXPLORE ♥</div>
+
+  <div class="card">
+    <h3>Close to the dome (Fort-Coulonge / Mansfield)</h3>
+    <label class="opt"><input type="checkbox" data-extra="magnum"><span><b>Restaurant Magnum Sunday brunch</b> — family spot in Mansfield, ~10 min before the dome<span class="note">Sundays only — brunch stop on the drive out</span></span><span class="price">~$40.24</span></label>
+    <label class="opt"><input type="checkbox" data-extra="pizza"><span><b>Pizza du Coin night</b> — Mansfield's little pizza spot, grab one for the dome · 10 min away</span><span class="price">~$34.49</span></label>
+    <label class="opt"><input type="checkbox" data-extra="cafedowntown"><span><b>Café Downtown, Fort-Coulonge</b> — burgers, pizza + local beer, live-music vibe · 12 min from the dome</span><span class="price">~$45.99</span></label>
+    <label class="opt"><input type="checkbox" data-extra="brysonhouse"><span><b>George Bryson House (1854)</b> — the big heritage house by the bridge in Mansfield<span class="note">museum + tea room are seasonal — the grounds, the house, the photos are the stop</span></span><span class="price">free</span></label>
+    <label class="opt"><input type="checkbox" data-extra="horse"><span><b>Horseback ride — R.S. Ranch</b> — guided rides for all levels, Fort-Coulonge area<span class="note">book ahead — price when we book, not in the total yet</span></span><span class="price">TBD</span></label>
+  </div>
+
+  <div class="card">
+    <h3>A little further (worth it if we feel like it)</h3>
+    <label class="opt"><input type="checkbox" data-extra="stoneschool"><span><b>Stone School Gallery, Portage-du-Fort</b> — local art in an 1870 stone schoolhouse<span class="note">Sun 11–4 when in season (check first) · ~25 min detour off the Shawville lunch trip</span></span><span class="price">free</span></label>
+    <label class="opt"><input type="checkbox" data-extra="whitebuffalo"><span><b>White Buffalo vintage shop, Shawville</b> — thrift + vintage treasure hunting by lunch</span><span class="price">free</span></label>
+    <label class="opt"><input type="checkbox" data-extra="nordik"><span><b>Nordik Spa, Chelsea — the big splurge</b> — thermal baths + saunas, plan 3–4 hrs<span class="note">a whole different way home (via Chelsea/A5, +~35 min of driving) · book ahead · $98/person + tax</span></span><span class="price">$225.35</span></label>
+    <label class="opt"><input type="checkbox" data-extra="wakefield"><span><b>Wakefield covered bridge</b> — the red bridge over the Gatineau River<span class="note">only on the alternate route home via Hwy 105 (+~30 min)</span></span><span class="price">free</span></label>
+    <label class="opt"><input type="checkbox" data-extra="pinklake"><span><b>Pink Lake lookout, Gatineau Park</b> — the turquoise lake lookout<span class="note">only on the A5 route home (+~20 min)</span></span><span class="price">free</span></label>
+  </div>
+
+  <div class="day">FUN ON THE WAY HOME ♥</div>
+
+  <div class="card">
+    <h3>The adventure route home (via Chelsea / A5)</h3>
+    <label class="opt"><input type="checkbox" data-extra="ripride"><span><b>Ripride zipline — Great Canadian Bungee, Chelsea</b> — 1,015 ft over the quarry lagoon at ~85 km/h<span class="note">their season runs to ~Nov 14 and they take bookings almost daily · book ahead · price per venue listings — confirm when booking</span></span><span class="price">~$80.00</span></label>
+    <label class="opt"><input type="checkbox" data-extra="bungee"><span><b>Bungee jump — Canada's highest</b> — 200 ft over the same lagoon 😱<span class="note">same stop as the Ripride · only if we're feeling BRAVE · price per venue listings — confirm when booking</span></span><span class="price">~$340.02</span></label>
+    <label class="opt"><input type="checkbox" data-extra="ziptour"><span><b>Ziptour — Arbraska Laflèche</b> — zipline tour over a turquoise lake, Val-des-Monts<span class="note">fall hours: weekends + holidays (Sun Nov 1 ✓) · Monday = call them, weekday bookings by request · $67/person on their site · ~2 hrs</span></span><span class="price">$154.07</span></label>
+    <label class="opt"><input type="checkbox" data-extra="cave"><span><b>Laflèche Cave discovery tour</b> — the biggest visited cave in the Canadian Shield, same park<span class="note">guided, ~1 hr, helmet + headlamp provided · $30/person on their site</span></span><span class="price">$68.99</span></label>
+    <p class="note" style="margin:8px 0 0">Checked for us: the ziplines at Chutes Coulonge, Camp Fortune (season ended Oct 25) and Interzip in Ottawa (ended mid-Oct) are all closed for the season 💔 — these ones above are the real November options.</p>
+  </div>
+
+  <div class="card">
+    <h3>More fun, any weather</h3>
+    <label class="opt"><input type="checkbox" data-extra="omega"><span><b>Parc Oméga safari, Montebello</b> — deer at the car window, wolves, bison on a 12 km drive<span class="note">open year-round · the BIG detour: ~1 hr 15 past Ottawa, turns Monday into a full day · ~$50/person online</span></span><span class="price">~$114.98</span></label>
+    <label class="opt"><input type="checkbox" data-extra="karting"><span><b>Indoor go-kart race — Top Karting, Gatineau</b> — 10-minute race, loser buys hot chocolate<span class="note">indoor = rain-proof · open Mondays 12–10 PM · ~$39/person per race</span></span><span class="price">~$91.98</span></label>
+  </div>
+
+  <div id="summary"></div>
+  <p class="fineprint">All prices are for two of us and include Quebec tax (GST + QST). ~ means an estimate — Jake confirms the exact number before anything's booked.<br>
+  Pack: swimsuit for the sauna + warm layers for the fire pit.</p>
+</div>
+
+<div id="cartbar">
+  <div class="inner">
+    <div><div id="cartTotal">$0.00</div><div style="font-size:10.5px;">TOTAL · tax in</div></div>
+    <div id="cartMeta">tick things to build our weekend…</div>
+    <button class="ghost" onclick="toggleSummary()">See plan + list</button>
+    <button onclick="exportPlan()">Export ♥</button>
+  </div>
+</div>
+
+<script>
+// ---- master line items: id -> {label, price (null = TBD), where, group} ----
+const GROUPS = {
+  ottawa: "🛒 Buy in Ottawa before we leave",
+  grocery: "🧺 Grocery run (Ottawa, or IGA in Shawville)",
+  order: "📦 Order ahead",
+  stops: "📍 Buy at the stops (Sunday)",
+  trip: "💳 Pay on the trip"
+};
+const ITEMS = {
+  cider_tasting:{label:"Cider tasting for two — Coronation Hall (Sun 1–4)", price:11.50, where:"pay there, Bristol", group:"trip"},
+  winery_bottle:{label:"Bottle of wine — Little Red Wagon Winery", price:28.75, where:"Little Red Wagon Winery, Clarendon (Sun 1–5)", group:"stops"},
+  saq_bottle:{label:"Bottle of wine for the dome", price:28.75, where:"SAQ Shawville, or grab one in Ottawa", group:"ottawa"},
+  bottle2:{label:"Second bottle of wine (tasting / time capsule)", price:28.75, where:"winery, or SAQ Shawville", group:"stops"},
+  cider_bottle:{label:"Cider bottle to take home", price:17.25, where:"Coronation Hall, Bristol", group:"stops"},
+  chutes:{label:"Chutes Coulonge — falls admission ×2", price:27.60, where:"pay at the park, Fort-Coulonge", group:"trip"},
+  cafe349:{label:"Lunch for two — Café 349, Shawville", price:39.09, where:"pay there", group:"trip"},
+  hurstys:{label:"Lunch for two — Hursty's, Shawville", price:40.24, where:"pay there", group:"trip"},
+  night2:{label:"Second night in the Vinyl Dome (Mon→Tue)", price:261.80, where:"Airbnb — check it's free first", group:"trip"},
+  alpaca:{label:"Alpaca farm tour — Willow Lane, Bristol", price:null, where:"book ahead by phone — price on booking", group:"trip"},
+  magnum:{label:"Sunday brunch for two — Restaurant Magnum, Mansfield", price:40.24, where:"pay there — Sundays, on the drive out", group:"trip"},
+  pizza:{label:"Pizza night — Pizza du Coin, Mansfield", price:34.49, where:"pay there — 10 min from the dome", group:"trip"},
+  cafedowntown:{label:"Lunch/dinner for two — Café Downtown, Fort-Coulonge", price:45.99, where:"pay there — burgers, pizza, local beer", group:"trip"},
+  nordik:{label:"Nordik Spa thermal experience ×2 — Chelsea", price:225.35, where:"book ahead online — detour on the way home", group:"trip"},
+  horse:{label:"Horseback ride — R.S. Ranch, Fort-Coulonge area", price:null, where:"book ahead — price on booking", group:"trip"},
+  ripride:{label:"Ripride zipline ×2 — Great Canadian Bungee, Chelsea", price:80.00, where:"book ahead — price per venue listings, confirm at booking", group:"trip"},
+  bungee:{label:"Bungee jump ×2 — Canada's highest, Chelsea", price:340.02, where:"book ahead — price per venue listings, confirm at booking", group:"trip"},
+  ziptour:{label:"Ziptour ziplines ×2 — Arbraska Laflèche", price:154.07, where:"book ahead online — $67/person on their site", group:"trip"},
+  cave:{label:"Laflèche Cave discovery tour ×2 — Arbraska", price:68.99, where:"book ahead — $30/person on their site", group:"trip"},
+  omega:{label:"Parc Oméga safari ×2 — Montebello", price:114.98, where:"buy online ahead — about $50/person", group:"trip"},
+  karting:{label:"Indoor go-kart race ×2 — Top Karting, Gatineau", price:91.98, where:"pay there — indoor, Mon 12–10 PM", group:"trip"},
+  smores:{label:"S'mores kit — graham crackers, marshmallows, chocolate", price:13.80, where:"grocery store", group:"grocery"},
+  props:{label:"Silly Halloween props — witch hats, glasses, headbands", price:9.20, where:"Dollarama, Ottawa", group:"ottawa"},
+  film:{label:"Polaroid / Instax film pack", price:22.00, where:"Walmart or Amazon", group:"ottawa"},
+  candy:{label:"Candy haul for the tournament", price:17.24, where:"Bulk Barn / grocery, Ottawa", group:"ottawa"},
+  fondue:{label:"Fondue groceries — chocolate, strawberries, cake", price:20.69, where:"grocery store", group:"grocery"},
+  paint:{label:"Paint night supplies — glasses/canvases + paint pens", price:17.00, where:"Dollarama / Michaels, Ottawa", group:"ottawa"},
+  hotchoc:{label:"Hot chocolate bar supplies — cocoa, marshmallows, cream", price:11.50, where:"grocery store", group:"grocery"},
+  spices:{label:"Mulled wine spices — cinnamon, cloves, orange, star anise", price:8.05, where:"grocery store", group:"grocery"},
+  jar:{label:"Bucket-list jar + paper slips", price:3.45, where:"Dollarama, Ottawa", group:"ottawa"},
+  flowers:{label:"Bouquet for the dome", price:34.49, where:"florist — order ahead, pick up en route", group:"order"},
+  cook_groceries:{label:"Dinner + breakfast groceries (est.)", price:45.00, where:"grocery store", group:"grocery"},
+  charc_base:{label:"Charcuterie board groceries", price:34.49, where:"grocery store / deli", group:"grocery"},
+  charc_upgrade:{label:"FULL board upgrade — extra cheeses + meats", price:40.24, where:"grocery store / deli", group:"grocery"}
+};
+// ---- choices: group -> value -> {plan, items} ----
+const CHOICES = {
+  start:{adventure:{plan:"Adventure first — cider + winery on the way, dome ~3:20", items:["cider_tasting","winery_bottle"]},
+         straight:{plan:"Straight to the dome — leave 1:30, dome ~3:20", items:[]}},
+  drinks:{toast:{plan:"Wine toast on the deck at sunset", items:[], needsBottle:true},
+          mulled:{plan:"Mulled wine by the fire pit", items:["spices"], needsBottle:true}},
+  firepit:{classic:{plan:"Fire pit: classic + cozy (s'mores + stargazing)", items:["smores"]},
+           silly:{plan:"Fire pit: cute + silly (Halloween props + Polaroids)", items:["props","film"]},
+           both:{plan:"Fire pit: BOTH — s'mores + Halloween props + Polaroids", items:["smores","props","film"]}},
+  dinner:{cook:{plan:"Dinner: cook together at the dome", items:["cook_groceries"]},
+          charcuterie:{plan:"Dinner: charcuterie night", items:["charc_base"]}},
+  after:{games:{plan:"After dinner: games night + candy tournament", items:["candy"]},
+         movie:{plan:"After dinner: blanket-fort movie night", items:[]}},
+  morning:{sleep:{plan:"Monday: sleep in til checkout", items:[]},
+           slow:{plan:"Monday: slow + sweet — sauna #2, breakfast, letters", items:[]}},
+  falls:{yes:{plan:"Waterfall: Chutes Coulonge after checkout", items:["chutes"]},
+         skip:{plan:"Waterfall: skipped — slow day", items:[]}},
+  lunch:{cafe:{plan:"Lunch: Café 349, Shawville", items:["cafe349"]},
+         hursty:{plan:"Lunch: Hursty's, Shawville", items:["hurstys"]}},
+  home:{slow:{plan:"Drive home: slow + stops (Luskville Falls)", items:[]},
+        straight:{plan:"Drive home: straight, our playlist", items:[]}}
+};
+const EXTRAS = {
+  namebottle:{plan:"Name the bottle after our song", items:[], needsBottle:true},
+  blind:{plan:"Blind wine tasting", items:["bottle2"]},
+  capsule:{plan:"Bottle time capsule (open anniversary #2)", items:["bottle2"]},
+  fondue:{plan:"Chocolate fondue night", items:["fondue"]},
+  paint:{plan:"Paint night (glasses / canvases)", items:["paint"]},
+  waiter:{plan:"Waiter night — mini wine flight", items:[]},
+  toasts:{plan:"Toasts for Year 2 at sunset", items:[]},
+  dance:{plan:"Starlit slow dance on the deck", items:[]},
+  scavenger:{plan:"Polaroid scavenger hunt", items:["film"]},
+  stargaze:{plan:"Stargazing + hot chocolate bar", items:["hotchoc"]},
+  truths:{plan:"Two truths + a lie by the fire", items:[]},
+  bucket:{plan:"Year-2 bucket list jar", items:["jar"]},
+  massage:{plan:"Massage swap", items:[]},
+  fullboard:{plan:"FULL charcuterie board upgrade", items:["charc_upgrade"]},
+  flowers:{plan:"Flowers waiting at the dome", items:["flowers"]},
+  ciderhome:{plan:"Cider bottle to take home", items:["cider_bottle"]},
+  alpaca:{plan:"Alpaca farm visit (book ahead)", items:["alpaca"]},
+  night2:{plan:"Stay a second night in the dome", items:["night2"]},
+  marchand:{plan:"Stop: Marchand covered bridge", items:[]},
+  norway:{plan:"Stop: Norway Bay waterfront stroll", items:[]},
+  milldam:{plan:"Stop: Mill Dam Park + Shawville Main St", items:[]},
+  ppj:{plan:"Stop: Cycloparc PPJ rail trail walk", items:[]},
+  renaissance:{plan:"Stop: Renaissance Variety retro shop", items:[]},
+  magnum:{plan:"Sunday brunch at Restaurant Magnum (drive out)", items:["magnum"]},
+  pizza:{plan:"Pizza du Coin night at the dome", items:["pizza"]},
+  cafedowntown:{plan:"Café Downtown, Fort-Coulonge", items:["cafedowntown"]},
+  nordik:{plan:"Nordik Spa detour on the way home (3–4 hrs)", items:["nordik"]},
+  horse:{plan:"Horseback ride — R.S. Ranch (book ahead)", items:["horse"]},
+  brysonhouse:{plan:"Stop: George Bryson House photo stop, Mansfield", items:[]},
+  stoneschool:{plan:"Stop: Stone School Gallery, Portage-du-Fort (Sun 11–4, seasonal)", items:[]},
+  whitebuffalo:{plan:"Stop: White Buffalo vintage shop, Shawville", items:[]},
+  wakefield:{plan:"Alternate route home: Wakefield covered bridge", items:[]},
+  pinklake:{plan:"Alternate route home: Pink Lake lookout, Gatineau Park", items:[]},
+  ripride:{plan:"Ripride zipline — Great Canadian Bungee, Chelsea (way home)", items:["ripride"]},
+  bungee:{plan:"Bungee jump — Great Canadian Bungee, Chelsea (way home)", items:["bungee"]},
+  ziptour:{plan:"Ziptour — Arbraska Laflèche (Sun, or Monday by phone)", items:["ziptour"]},
+  cave:{plan:"Laflèche Cave tour — Arbraska (same stop as Ziptour)", items:["cave"]},
+  omega:{plan:"Parc Oméga safari — Montebello (big detour day)", items:["omega"]},
+  karting:{plan:"Go-kart race — Top Karting, Gatineau (way home)", items:["karting"]},
+};
+const state = {choices:{}, extras:new Set()};
+function readState(){
+  document.querySelectorAll('.card[data-group]').forEach(card=>{
+    const g = card.dataset.group;
+    const sel = card.querySelector('input[type=radio]:checked');
+    if(sel) state.choices[g] = sel.value;
+  });
+  state.extras = new Set([...document.querySelectorAll('input[data-extra]:checked')].map(i=>i.dataset.extra));
+}
+function collect(){
+  const items = new Set(); const plan = [];
+  let needsBottle = false, hasWineryBottle = false;
+  for(const g of Object.keys(CHOICES)){
+    const c = CHOICES[g][state.choices[g]];
+    if(!c) continue;
+    plan.push(c.plan);
+    c.items.forEach(i=>items.add(i));
+    if(c.needsBottle) needsBottle = true;
+  }
+  state.extras.forEach(k=>{
+    const e = EXTRAS[k]; if(!e) return;
+    plan.push(e.plan);
+    e.items.forEach(i=>items.add(i));
+    if(e.needsBottle) needsBottle = true;
+  });
+  if(items.has("winery_bottle")) hasWineryBottle = true;
+  if(needsBottle && !hasWineryBottle) items.add("saq_bottle");
+  // full board without charcuterie night -> add base board too
+  if(items.has("charc_upgrade") && !items.has("charc_base")) items.add("charc_base");
+  return {items, plan};
+}
+const fmt = n => "$" + n.toFixed(2);
+function totals(items){
+  let total = 0, shop = 0, trip = 0, tbd = 0;
+  items.forEach(id=>{
+    const it = ITEMS[id];
+    if(it.price === null){ tbd++; return; }
+    total += it.price;
+    if(it.group === "trip") trip += it.price; else shop += it.price;
+  });
+  return {total, shop, trip, tbd};
+}
+function render(){
+  readState();
+  const {items, plan} = collect();
+  const t = totals(items);
+  document.getElementById('cartTotal').textContent = fmt(t.total);
+  document.getElementById('cartMeta').innerHTML =
+    items.size + " cost items · buy-ahead " + fmt(t.shop) + " · on the trip " + fmt(t.trip) + (t.tbd ? " · +" + t.tbd + " TBD" : "");
+  // summary
+  let h = "<h2>Our plan ♥</h2><ul>" + plan.map(p=>"<li>"+p+"</li>").join("") + "</ul>";
+  h += "<h4>Shopping list — what to get, where, how much</h4>";
+  for(const g of Object.keys(GROUPS)){
+    const rows = [...items].filter(id=>ITEMS[id].group===g);
+    if(!rows.length) continue;
+    h += "<h4 style='text-transform:none;letter-spacing:0;'>" + GROUPS[g] + "</h4>";
+    rows.forEach(id=>{
+      const it = ITEMS[id];
+      h += "<div class='rowline'><span>☐ " + it.label + "<br><span class='where'>" + it.where + "</span></span><b>" + (it.price===null ? "TBD" : fmt(it.price)) + "</b></div>";
+    });
+  }
+  h += "<div class='tot'>Buy before / at stops: " + fmt(t.shop) + "<br>Pay on the trip: " + fmt(t.trip) +
+       (t.tbd ? "<br>Plus " + t.tbd + " item(s) priced when booked" : "") +
+       "<br>GRAND TOTAL (tax in): " + fmt(t.total) + "</div>";
+  h += "<div class='btns no-print'><button onclick='window.print()'>Print / save as PDF</button>" +
+       "<button onclick='copyPlan()'>Copy the list</button>" +
+       "<button onclick='downloadPlan()'>Download .txt</button></div>";
+  h += "<p class='where' style='margin-top:10px;'>One year of us ♥ — Jake & Van · Nov 1–2, 2026</p>";
+  document.getElementById('summary').innerHTML = h;
+}
+function summaryText(){
+  readState();
+  const {items, plan} = collect();
+  const t = totals(items);
+  let out = "OUR ANNIVERSARY WEEKEND — Jake & Van · Nov 1–2, 2026\n\nOUR PLAN:\n" + plan.map(p=>"• " + p).join("\n");
+  out += "\n\nSHOPPING LIST (what · where · price, tax in):\n";
+  for(const g of Object.keys(GROUPS)){
+    const rows = [...items].filter(id=>ITEMS[id].group===g);
+    if(!rows.length) continue;
+    out += "\n" + GROUPS[g] + "\n";
+    rows.forEach(id=>{ const it = ITEMS[id]; out += "☐ " + it.label + " — " + it.where + " — " + (it.price===null ? "TBD" : fmt(it.price)) + "\n"; });
+  }
+  out += "\nBuy before/at stops: " + fmt(t.shop) + " · Pay on the trip: " + fmt(t.trip) + "\nGRAND TOTAL (tax in): " + fmt(t.total) + (t.tbd ? " (+ TBD items)" : "");
+  return out;
+}
+function copyPlan(){
+  navigator.clipboard.writeText(summaryText()).then(()=>alert("Copied ♥ — paste it anywhere."));
+}
+function downloadPlan(){
+  const blob = new Blob([summaryText()], {type:"text/plain"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob); a.download = "Jake-Van-Anniversary-Plan.txt"; a.click();
+  URL.revokeObjectURL(a.href);
+}
+function toggleSummary(){
+  const s = document.getElementById('summary');
+  s.classList.toggle('open');
+  if(s.classList.contains('open')) s.scrollIntoView({behavior:"smooth"});
+}
+function exportPlan(){
+  const s = document.getElementById('summary');
+  s.classList.add('open');
+  s.scrollIntoView({behavior:"smooth"});
+}
+document.querySelectorAll('input').forEach(i=>i.addEventListener('change', render));
+render();
+
+/* ---- cloud sync (npoint JSON bin) ---- */
+const BIN_URL = 'https://api.npoint.io/63e9878b054b82fdc3fa';
+const isJake = new URLSearchParams(location.search).has('jake');
+const pill = document.getElementById('savepill');
+function applyState(v){
+  if(!v) return;
+  document.querySelectorAll('.card[data-group]').forEach(card=>{
+    const g = card.dataset.group;
+    if(v.choices && v.choices[g] !== undefined){
+      card.querySelectorAll('input[type=radio]').forEach(r=>{ r.checked = (r.value === v.choices[g]); });
+    }
+  });
+  const ex = Array.isArray(v.extras) ? v.extras : [];
+  document.querySelectorAll('input[data-extra]').forEach(c=>{ c.checked = ex.includes(c.dataset.extra); });
+  render();
+}
+let saveTimer = null;
+function cloudSave(){
+  if(isJake) return;
+  readState();
+  pill.textContent = 'Saving\u2026';
+  fetch(BIN_URL, {method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({choices: state.choices, extras: [...state.extras], ts: Date.now()})})
+    .then(r=>{ if(!r.ok) throw 0; pill.textContent = 'Saved \u2713 \u2014 Jake can see your picks \u2665'; })
+    .catch(()=>{ pill.textContent = 'Could not save \u2014 check connection'; });
+}
+document.querySelectorAll('input').forEach(i=>i.addEventListener('change', ()=>{ clearTimeout(saveTimer); saveTimer = setTimeout(cloudSave, 500); }));
+function cloudLoad(cb){
+  fetch(BIN_URL).then(r=>r.json()).then(v=>{ if(v && (v.choices || v.extras)) cb(v); }).catch(()=>{});
+}
+if(isJake){
+  document.body.classList.add('jake');
+  document.querySelectorAll('input').forEach(i=>{ i.disabled = true; });
+  let lastTs = 0;
+  const poll = ()=> cloudLoad(v=>{
+    if(v.ts && v.ts !== lastTs){
+      lastTs = v.ts;
+      applyState(v);
+      document.getElementById('jaketime').textContent = 'last saved ' + new Date(v.ts).toLocaleString([], {month:'short', day:'numeric', hour:'numeric', minute:'2-digit'});
+    }
+  });
+  poll(); setInterval(poll, 4000);
+} else {
+  cloudLoad(applyState);
+}
+</script>
+</body>
+</html>
