@@ -64,6 +64,10 @@ body.jake #savepill{display:none}
 .strip .pol:nth-child(3){transform:rotate(-2deg)}
 .strip .pol:nth-child(4){transform:rotate(3deg)}
 .strip.two .pol{width:44%;max-width:170px}
+.payer{display:inline-flex;gap:4px;margin-left:8px;vertical-align:middle}
+.pbtn{border:1px solid #C4556B;background:#fff;color:#C4556B;border-radius:999px;font-size:10px;padding:2px 8px;cursor:pointer;font-family:Verdana,sans-serif}
+.pbtn.on{background:#C4556B;color:#fff;font-weight:bold}
+body.jake .payer{pointer-events:none;opacity:.55}
 </style>
 </head>
 <body>
@@ -89,7 +93,7 @@ body.jake #savepill{display:none}
     <div class="set">🗓 <b>When:</b> Sunday Nov 1 → Monday Nov 2 · check-in from <b>3:00 PM</b> · checkout <b>11:00 AM</b></div>
     <div class="set">🔥 <b>What it is:</b> our own dome with a private sauna, a fire pit, a record player — and a real bed under the stars</div>
     <div class="set">📵 <b>Heads up:</b> there's <b>no cell service</b> up there — turn on Wi-Fi calling before we go · dome Wi-Fi password: <b>NRPwifi23!</b></div>
-    <div class="set">💰 <b>Prices:</b> every number on this page is the <b>total for the two of us, tax already in</b> — if a note says "each", that's per person before tax, and the big price beside it is still the for-two total with tax.</div>
+    <div class="set">💰 <b>Prices:</b> every number on this page is the <b>total for the two of us, tax already in</b> — if a note says "each", that's per person before tax, and the big price beside it is still the for-two total with tax. The bar at the bottom splits it 50/50 \u2014 and in our plan (bottom button) you can tap J or V on any line if one of us is covering that one; it rebalances itself.</div>
     <div class="set">🎒 <b>Pack:</b> a swimsuit for the sauna, warm layers for the fire pit, comfy shoes — everything else is handled ♥</div>
   </div>
 
@@ -362,7 +366,7 @@ const EXTRAS = {
   omega:{plan:"Parc Oméga safari — Montebello (big detour day)", items:["omega"]},
   karting:{plan:"Go-kart race — Top Karting, Gatineau (way home)", items:["karting"]},
 };
-const state = {choices:{}, extras:new Set()};
+const state = {choices:{}, extras:new Set(), payers:{}};
 function readState(){
   document.querySelectorAll('.card[data-group]').forEach(card=>{
     const g = card.dataset.group;
@@ -394,6 +398,30 @@ function collect(){
   return {items, plan};
 }
 const fmt = n => "$" + n.toFixed(2);
+function splitTotals(items){
+  let j = 0;
+  items.forEach(id=>{
+    const it = ITEMS[id];
+    if(!it || it.price === null) return;
+    const p = state.payers[id] || "split";
+    if(p === "jake") j += it.price;
+    else if(p === "split") j += it.price / 2;
+  });
+  const t = totals(items);
+  const jf = Math.round(j * 100) / 100;
+  return {jake: jf, van: Math.round((t.total - jf) * 100) / 100};
+}
+function setPayer(id, who){
+  if(typeof isJake !== "undefined" && isJake) return;
+  state.payers[id] = who;
+  render();
+  if(typeof cloudSave === "function") cloudSave();
+}
+function payerBtns(id){
+  const p = state.payers[id] || "split";
+  const b = (w, label) => "<button class='pbtn" + (p === w ? " on" : "") + "' onclick=\"setPayer('" + id + "','" + w + "')\">" + label + "</button>";
+  return "<span class='payer'>" + b("jake", "J") + b("split", "½") + b("van", "V") + "</span>";
+}
 function totals(items){
   let total = 0, shop = 0, trip = 0, tbd = 0;
   items.forEach(id=>{
@@ -409,8 +437,10 @@ function render(){
   const {items, plan} = collect();
   const t = totals(items);
   document.getElementById('cartTotal').textContent = fmt(t.total);
+  const sp = splitTotals(items);
   document.getElementById('cartMeta').innerHTML =
-    items.size + " cost items · buy-ahead " + fmt(t.shop) + " · on the trip " + fmt(t.trip) + (t.tbd ? " · +" + t.tbd + " TBD" : "");
+    items.size + " cost items · buy-ahead " + fmt(t.shop) + " · on the trip " + fmt(t.trip) + (t.tbd ? " · +" + t.tbd + " TBD" : "") +
+    "<br>Split: Jake " + fmt(sp.jake) + " · Van " + fmt(sp.van);
   // summary
   let h = "<h2>Our plan ♥</h2><ul>" + plan.map(p=>"<li>"+p+"</li>").join("") + "</ul>";
   h += "<h4>Shopping list — what to get, where, how much</h4>";
@@ -420,10 +450,12 @@ function render(){
     h += "<h4 style='text-transform:none;letter-spacing:0;'>" + GROUPS[g] + "</h4>";
     rows.forEach(id=>{
       const it = ITEMS[id];
-      h += "<div class='rowline'><span>☐ " + it.label + "<br><span class='where'>" + it.where + "</span></span><b>" + (it.price===null ? "TBD" : fmt(it.price)) + "</b></div>";
+      h += "<div class='rowline'><span>☐ " + it.label + "<br><span class='where'>" + it.where + "</span>" + (it.price===null ? "" : payerBtns(id)) + "</span><b>" + (it.price===null ? "TBD" : fmt(it.price)) + "</b></div>";
     });
   }
   h += "<div class='tot'>Buy before / at stops: " + fmt(t.shop) + "<br>Pay on the trip: " + fmt(t.trip) +
+       "<br><br>THE SPLIT \u2014 Jake covers " + fmt(sp.jake) + " \u00b7 Van covers " + fmt(sp.van) +
+       "<br><span class='where'>Every line starts split 50/50. Tap J or V on a line if one of us is covering that one \u2014 it rebalances itself.</span>" +
        (t.tbd ? "<br>Plus " + t.tbd + " item(s) priced when booked" : "") +
        "<br>GRAND TOTAL (for two, tax in): " + fmt(t.total) + "</div>";
   h += "<p class='where' style='margin-top:10px;'>All saved automatically as you tap \u2665 Jake sees your picks live \u2014 nothing to send, save, or export.</p>";
@@ -481,6 +513,7 @@ function applyState(v){
   });
   const ex = Array.isArray(v.extras) ? v.extras : [];
   document.querySelectorAll('input[data-extra]').forEach(c=>{ c.checked = ex.includes(c.dataset.extra); });
+  if(v.payers) state.payers = v.payers;
   render();
 }
 let saveTimer = null;
@@ -489,7 +522,7 @@ function cloudSave(){
   readState();
   pill.textContent = 'Saving\u2026';
   fetch(BIN_URL, {method:'POST', headers:{'Content-Type':'application/json'},
-    body: JSON.stringify({choices: state.choices, extras: [...state.extras], ts: Date.now()})})
+    body: JSON.stringify({choices: state.choices, extras: [...state.extras], payers: state.payers, ts: Date.now()})})
     .then(r=>{ if(!r.ok) throw 0; pill.textContent = 'Saved \u2713 \u2014 Jake can see your picks \u2665'; })
     .catch(()=>{ pill.textContent = 'Could not save \u2014 check connection'; });
 }
