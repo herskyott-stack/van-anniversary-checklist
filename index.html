@@ -65,6 +65,7 @@ body.jake #savepill{display:none}
 .strip .pol:nth-child(4){transform:rotate(3deg)}
 .strip.two .pol{width:44%;max-width:170px}
 .ps{text-align:center;color:#C4556B;font-family:Georgia,serif;font-style:italic;font-size:12.5px;margin:10px 0 2px}
+.mapbtn{display:inline-block;background:#59303E;color:#fff !important;border-radius:8px;padding:10px 14px;font-size:13px;font-family:Verdana,sans-serif;text-decoration:none}
 .payer{display:inline-flex;gap:4px;margin-left:8px;vertical-align:middle}
 .pbtn{border:1px solid #C4556B;background:#fff;color:#C4556B;border-radius:999px;font-size:10px;padding:2px 8px;cursor:pointer;font-family:Verdana,sans-serif}
 .pbtn.on{background:#C4556B;color:#fff;font-weight:bold}
@@ -220,7 +221,6 @@ body.jake .payer{pointer-events:none;opacity:.55}
     <label class="opt"><input type="checkbox" data-extra="pizza"><span><b>Pizza du Coin night</b> — Mansfield's little pizza spot, grab one for the dome · 10 min away</span><span class="price">~$34.49</span></label>
     <label class="opt"><input type="checkbox" data-extra="cafedowntown"><span><b>Café Downtown, Fort-Coulonge</b> — burgers, pizza + local beer, live-music vibe · 12 min from the dome</span><span class="price">~$45.99</span></label>
     <label class="opt"><input type="checkbox" data-extra="brysonhouse"><span><b>George Bryson House (1854)</b> — the big heritage house by the bridge in Mansfield<span class="note">museum + tea room are seasonal — the grounds, the house, the photos are the stop</span></span><span class="price">free</span></label>
-    <label class="opt"><input type="checkbox" data-extra="horse"><span><b>Horseback ride — R.S. Ranch</b> — guided rides for all levels, Fort-Coulonge area<span class="note">book ahead — price when we book, not in the total yet</span></span><span class="price">TBD</span></label>
   </div>
 
   <div class="card">
@@ -228,6 +228,7 @@ body.jake .payer{pointer-events:none;opacity:.55}
     <label class="opt"><input type="checkbox" data-extra="stoneschool"><span><b>Stone School Gallery, Portage-du-Fort</b> — local art in an 1870 stone schoolhouse<span class="note">Sun 11–4 when in season (check first) · ~25 min detour off the Shawville lunch trip</span></span><span class="price">free</span></label>
     <label class="opt"><input type="checkbox" data-extra="whitebuffalo"><span><b>White Buffalo vintage shop, Shawville</b> — thrift + vintage treasure hunting by lunch</span><span class="price">free</span></label>
     <label class="opt"><input type="checkbox" data-extra="nordik"><span><b>Nordik Spa, Chelsea — the big splurge</b> — thermal baths + saunas, plan 3–4 hrs<span class="note">a whole different way home (via Chelsea/A5, +~35 min of driving) · book ahead · $98 each before tax — the price at right is for two, tax in</span></span><span class="price">$225.35</span></label>
+    <label class="opt"><input type="checkbox" data-extra="koena"><span><b>Koena Spa, Aylmer — the city spa</b> — urban Nordic baths inside Château Cartier, right ON the Hwy 148 way home (no detour)<span class="note">open daily 9 AM–10 PM · no reservation needed for the baths · $49 each before tax (Sun–Thu rate on their site) — price at right is for two, tax in · robes $9 each if we want them</span></span><span class="price">$112.68</span></label>
     <label class="opt"><input type="checkbox" data-extra="wakefield"><span><b>Wakefield covered bridge</b> — the red bridge over the Gatineau River<span class="note">only on the alternate route home via Hwy 105 (+~30 min)</span></span><span class="price">free</span></label>
     <label class="opt"><input type="checkbox" data-extra="pinklake"><span><b>Pink Lake lookout, Gatineau Park</b> — the turquoise lake lookout<span class="note">only on the A5 route home (+~20 min)</span></span><span class="price">free</span></label>
   </div>
@@ -287,8 +288,8 @@ const ITEMS = {
   magnum:{label:"Sunday brunch for two — Restaurant Magnum, Mansfield", price:40.24, where:"pay there — Sundays, on the drive out", group:"trip"},
   pizza:{label:"Pizza night — Pizza du Coin, Mansfield", price:34.49, where:"pay there — 10 min from the dome", group:"trip"},
   cafedowntown:{label:"Lunch/dinner for two — Café Downtown, Fort-Coulonge", price:45.99, where:"pay there — burgers, pizza, local beer", group:"trip"},
+  koena:{label:"Koena Spa thermal baths — Aylmer (for two)", price:112.68, where:"Koena Spa, 1172 Chemin d'Aylmer, Gatineau — no reservation needed for the baths", group:"trip"},
   nordik:{label:"Nordik Spa thermal experience ×2 — Chelsea", price:225.35, where:"book ahead online — detour on the way home", group:"trip"},
-  horse:{label:"Horseback ride — R.S. Ranch, Fort-Coulonge area", price:null, where:"book ahead — price on booking", group:"trip"},
   ripride:{label:"Ripride zipline ×2 — Great Canadian Bungee, Chelsea", price:80.00, where:"book ahead — price per venue listings, confirm at booking", group:"trip"},
   bungee:{label:"Bungee jump ×2 — Canada's highest, Chelsea", price:340.02, where:"book ahead — price per venue listings, confirm at booking", group:"trip"},
   ziptour:{label:"Ziptour ziplines ×2 — Arbraska Laflèche", price:154.07, where:"book ahead online — $67/person on their site", group:"trip"},
@@ -358,8 +359,8 @@ const EXTRAS = {
   magnum:{plan:"Sunday brunch at Restaurant Magnum (drive out)", items:["magnum"]},
   pizza:{plan:"Pizza du Coin night at the dome", items:["pizza"]},
   cafedowntown:{plan:"Café Downtown, Fort-Coulonge", items:["cafedowntown"]},
+  koena:{plan:"Koena Spa — thermal baths in Aylmer, right on the way home", items:["koena"]},
   nordik:{plan:"Nordik Spa detour on the way home (3–4 hrs)", items:["nordik"]},
-  horse:{plan:"Horseback ride — R.S. Ranch (book ahead)", items:["horse"]},
   brysonhouse:{plan:"Stop: George Bryson House photo stop, Mansfield", items:[]},
   stoneschool:{plan:"Stop: Stone School Gallery, Portage-du-Fort (Sun 11–4, seasonal)", items:[]},
   whitebuffalo:{plan:"Stop: White Buffalo vintage shop, Shawville", items:[]},
@@ -417,6 +418,46 @@ function splitTotals(items){
   const jf = Math.round(j * 100) / 100;
   return {jake: jf, van: Math.round((t.total - jf) * 100) / 100};
 }
+const PLACES = {
+  home:{label:"Home \u2014 Orl\u00e9ans, Ottawa", q:"1368 Talcy Crescent, Ottawa, ON"},
+  cider:{label:"Coronation Hall Cider Mills \u2014 Bristol", q:"Coronation Hall Cider Mills, Bristol, QC"},
+  winery:{label:"Little Red Wagon Winery \u2014 Clarendon", q:"Little Red Wagon Winery, Clarendon, QC"},
+  alpaca:{label:"Willow Lane Alpacas \u2014 Bristol", q:"Willow Lane Alpacas, Bristol, QC"},
+  dome:{label:"Vinyl Dome \u2014 Pontiac", q:"299 Chem. du Lac de la Truite, Pontiac, QC"},
+  marchand:{label:"Marchand Bridge \u2014 Fort-Coulonge", q:"Pont Marchand, Mansfield-et-Pontefract, QC"},
+  bryson:{label:"George Bryson House \u2014 Mansfield", q:"George Bryson House, Mansfield-et-Pontefract, QC"},
+  chutes:{label:"Parc des Chutes Coulonge", q:"Parc des Chutes Coulonge, Mansfield-et-Pontefract, QC"},
+  cafe:{label:"Caf\u00e9 349 \u2014 Shawville", q:"Caf\u00e9 349, 349 Rue Main, Shawville, QC"},
+  hursty:{label:"Hursty's \u2014 Shawville", q:"Hursty's Bar & Grill, Shawville, QC"},
+  norway:{label:"Norway Bay \u2014 Bristol", q:"Norway Bay, Bristol, QC"},
+  luskville:{label:"Luskville Falls", q:"Luskville Falls, Luskville, QC"},
+  koena:{label:"Koena Spa \u2014 Aylmer", q:"Koena Spa, 1172 Chemin d'Aylmer, Gatineau, QC"},
+  nordik:{label:"Nordik Spa \u2014 Chelsea", q:"Nordik Spa-Nature, Chelsea, QC"},
+  bungee:{label:"Great Canadian Bungee \u2014 Chelsea", q:"Great Canadian Bungee, Chelsea, QC"},
+  arbraska:{label:"Arbraska Lafl\u00e8che \u2014 Val-des-Monts", q:"Arbraska Lafl\u00e8che, Val-des-Monts, QC"},
+  karting:{label:"Top Karting \u2014 Gatineau", q:"Top Karting, Gatineau, QC"},
+  omega:{label:"Parc Om\u00e9ga \u2014 Montebello", q:"Parc Om\u00e9ga, Montebello, QC"}
+};
+function routeStops(){
+  const st = [PLACES.home]; const ch = state.choices, ex = state.extras;
+  if(ch.start === "adventure"){ st.push(PLACES.cider); st.push(PLACES.winery); }
+  if(ex.has("alpaca")) st.push(PLACES.alpaca);
+  st.push(PLACES.dome);
+  if(ex.has("marchand")) st.push(PLACES.marchand);
+  if(ex.has("brysonhouse")) st.push(PLACES.bryson);
+  if(ch.falls === "yes") st.push(PLACES.chutes);
+  st.push(ch.lunch === "hursty" ? PLACES.hursty : PLACES.cafe);
+  if(ex.has("norway")) st.push(PLACES.norway);
+  if(ch.home === "slow") st.push(PLACES.luskville);
+  if(ex.has("koena")) st.push(PLACES.koena);
+  if(ex.has("nordik")) st.push(PLACES.nordik);
+  if(ex.has("ripride") || ex.has("bungee")) st.push(PLACES.bungee);
+  if(ex.has("ziptour") || ex.has("cave")) st.push(PLACES.arbraska);
+  if(ex.has("karting")) st.push(PLACES.karting);
+  if(ex.has("omega")) st.push(PLACES.omega);
+  st.push(PLACES.home);
+  return st;
+}
 function setPayer(id, who){
   if(typeof isJake !== "undefined" && isJake) return;
   state.payers[id] = who;
@@ -449,6 +490,17 @@ function render(){
     "<br>Split: Jake " + fmt(sp.jake) + " · Van " + fmt(sp.van);
   // summary
   let h = "<h2>Our plan ♥</h2><ul>" + plan.map(p=>"<li>"+p+"</li>").join("") + "</ul>";
+  const stops = routeStops();
+  if(stops.length > 2){
+    const qs = stops.map(x=>encodeURIComponent(x.q));
+    let wp = qs.slice(1,-1), trimmed = false;
+    if(wp.length > 9){ wp = wp.slice(0,9); trimmed = true; }
+    const murl = "https://www.google.com/maps/dir/?api=1&origin=" + qs[0] + "&destination=" + qs[qs.length-1] + (wp.length ? "&waypoints=" + wp.join("|") : "");
+    h += "<h4>\ud83d\uddfa Our route \u2014 where we're going</h4>" +
+         stops.map((x,i)=>"<div class='rowline'><span>\ud83d\udccd " + (i+1) + ". " + x.label + "</span></div>").join("") +
+         "<div class='btns'><a class='mapbtn' href='" + murl + "' target='_blank' rel='noopener'>Open our route in Google Maps \u2665</a></div>" +
+         (trimmed ? "<p class='where'>That's a LOT of stops \u2014 the Maps link shows the first chunk; the rest are in our plan above.</p>" : "");
+  }
   h += "<h4>Shopping list — what to get, where, how much</h4>";
   for(const g of Object.keys(GROUPS)){
     const rows = [...items].filter(id=>ITEMS[id].group===g);
