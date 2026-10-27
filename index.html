@@ -52,16 +52,35 @@
 #jakebar{display:none;background:#59303E;color:#fff;text-align:center;padding:10px 12px;font-size:14px;border-radius:12px;margin:0 0 12px}
 body.jake #jakebar{display:block}
 body.jake #savepill{display:none}
+
+.bgwall{position:fixed;inset:0;background:url('img/bg.jpg') center 30%/cover no-repeat;opacity:.14;filter:blur(2px) saturate(1.15);z-index:0;pointer-events:none}
+.wrap{position:relative;z-index:1}
+.strip{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:4px 0 16px}
+.pol{background:#fff;padding:6px 6px 8px;border-radius:4px;box-shadow:0 3px 10px rgba(89,48,62,.28);width:30%;max-width:150px;margin:0}
+.pol img{width:100%;height:118px;object-fit:cover;border-radius:2px;display:block}
+.pol figcaption{text-align:center;font-size:10.5px;color:#8a5a68;margin-top:5px;font-family:Verdana,sans-serif}
+.strip .pol:nth-child(1){transform:rotate(-3deg)}
+.strip .pol:nth-child(2){transform:rotate(2deg)}
+.strip .pol:nth-child(3){transform:rotate(-2deg)}
+.strip .pol:nth-child(4){transform:rotate(3deg)}
+.strip.two .pol{width:44%;max-width:170px}
 </style>
 </head>
 <body>
 <div id="jakebar">♥ You're seeing <b>Van's picks — live</b> · <span id="jaketime">waiting for her first save…</span></div>
+<div class="bgwall"></div>
 <div id="savepill">Your picks save automatically ♥</div>
 <div class="wrap">
   <h1>Our Anniversary Weekend ♥</h1>
   <div class="sub">for Van · Sunday Nov 1 → Monday Nov 2, 2026 · Vinyl Dome, Pontiac</div>
   <p class="intro">Tick what we want to do — everything you pick lands in the cart at the bottom with the price <b>tax already in</b>.<br>
   At the end it builds our plan + the shopping list: what to buy, where, and what it costs.</p>
+
+  <div class="strip">
+    <figure class="pol"><img src="img/p-ferris.jpg" alt="Us at the ferris wheel"><figcaption>ferris wheel kiss ♥</figcaption></figure>
+    <figure class="pol"><img src="img/p-cat.jpg" alt="Us with the cat"><figcaption>us + the boss 🐱</figcaption></figure>
+    <figure class="pol"><img src="img/p-tongue.jpg" alt="Goofy selfie"><figcaption>always goofy</figcaption></figure>
+  </div>
 
   <div class="day">THE BASICS ♥</div>
 
@@ -134,6 +153,11 @@ body.jake #savepill{display:none}
     <h3>The drive home <span class="when">· pick one</span></h3>
     <label class="opt"><input type="radio" name="home" value="slow" checked><span><b>A · Slow + stops</b> — Luskville Falls hike right on Hwy 148 · home ~4:30–5:00</span><span class="price">$0</span></label>
     <label class="opt"><input type="radio" name="home" value="straight"><span><b>B · Straight home</b> — cozy drive, our playlist · home ~2:00</span><span class="price">$0</span></label>
+  </div>
+
+  <div class="strip two">
+    <figure class="pol"><img src="img/p-beanie.jpg" alt="Pink beanie selfie"><figcaption>my pink-beanie girl</figcaption></figure>
+    <figure class="pol"><img src="img/p-close.jpg" alt="Foreheads together"><figcaption>foreheads ♥</figcaption></figure>
   </div>
 
   <div class="day">EXTRAS · TICK ANY ♥</div>
